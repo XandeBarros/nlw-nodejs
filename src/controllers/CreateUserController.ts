@@ -7,9 +7,9 @@ class CreateUserController {
     const { name, email, admin } = req.body;
     
     const createUserService = new CreateUserService();
-
+    
     const user = await createUserService.execute({ name, email, admin });
-
+    
     return res.json(user);
   }
 }
